@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-service
+  name: frontend
 spec:
   selector:
     app: nodejs

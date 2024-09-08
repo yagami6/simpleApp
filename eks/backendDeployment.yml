@@ -16,7 +16,8 @@ spec:
       - name: backend-container
         image: yagami6/backendapp:v1
         ports:
-        - containerPort: 4000
+        - name: http
+          containerPort: 4000
         resources:
           limits:
             memory: "128Mi"
