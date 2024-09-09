@@ -60,6 +60,7 @@ data:
       server {
         listen 80;
         location /backend/ {
+          rewrite ^/backend(/.*)$ $1 break;
           proxy_pass http://backend;
         }
         location / {
