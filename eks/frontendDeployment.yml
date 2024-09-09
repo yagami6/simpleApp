@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nodejs-container
-        image: yagami6/frontendapp:v1  # Replace with your Docker image URL
+        image: yagami6/frontendapp:v2  # Replace with your Docker image URL
         ports:
         - containerPort: 3000
         resources:
