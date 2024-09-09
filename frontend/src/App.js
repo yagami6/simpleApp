@@ -4,7 +4,7 @@ const App = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://backend:4000/')
+    fetch('/backend/')
       .then(response => response.json())
       .then(data => setMessage(data.Hello));
   }, []);
