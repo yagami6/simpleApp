@@ -4,12 +4,12 @@ metadata:
   name: app-ingress
   annotations:
     # These annotations may vary depending on your Ingress controller (e.g., nginx, traefik, etc.)
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
   - http:
       paths:
-      - path: /backend
+      - path: /backend(/|$)(.*)
         pathType: Prefix
         backend:
           service:

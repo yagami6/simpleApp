@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: yagami6/backendapp:v1
+        image: yagami6/backendapp:v3
         ports:
         - name: http
           containerPort: 4000
