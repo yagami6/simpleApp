@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
 
-app = FastAPI(root_path="/backend")
+app = FastAPI()
 
 
 origins = ["*"]

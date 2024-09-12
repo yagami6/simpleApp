@@ -4,7 +4,7 @@ const App = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('/backend/')
+    fetch(`${window.location.protocol}//${window.location.hostname}:4000`)
       .then(response => response.json())
       .then(data => setMessage(data.Hello));
   }, []);
