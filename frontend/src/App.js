@@ -4,7 +4,7 @@ const App = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch(`${window.location.protocol}//${window.location.hostname}:4000`)
+    fetch(`${process.env.REACT_APP_API_URL}`)
       .then(response => response.json())
       .then(data => setMessage(data.Hello));
   }, []);
