@@ -13,13 +13,13 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: backend
+            name: combined
             port:
               number: 4000
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: frontend
+            name: combined
             port:
               number: 3000

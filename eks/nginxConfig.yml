@@ -52,10 +52,10 @@ data:
     }
     http {
       upstream backend {
-        server backend:4000;
+        server combined:4000;
       }
       upstream frontend {
-        server frontend:3000;
+        server combined:3000;
       }
       server {
         listen 80;

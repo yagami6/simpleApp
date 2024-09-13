@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: combined-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: combined
+  template:
+    metadata:
+      labels:
+        app: combined
+    spec:
+      containers:
+      - name: combined
+        image: yagami6/combinedsmallimage:v1
+        ports:
+        - name: frontend
+          containerPort: 3000
+        - name: backend
+          containerPort: 4000
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
